@@ -62,7 +62,7 @@ public class ProductController {
                     // Itera on the results
                     while (rs.next()) {
                         System.out.println("Id: " + rs.getInt("id") + ", Name: " + rs.getString("name") + ", Price: " + rs.getFloat("price")
-                        + ", Description: " + rs.getString("description" ) + ", Category: " + rs.getInt("category" ) +", Supplier: " + rs.getInt("supplier" ) 
+                        + ", Description: " + rs.getString("description" ) + ", Category: " + rs.getInt("id_category" ) +", Supplier: " + rs.getInt("id_supplier" ) 
                         );
                     }
                 }
