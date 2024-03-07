@@ -1,0 +1,22 @@
+create table supplier (
+id int primary key not null,
+name varchar (120) not null,
+phone varchar (20) not null
+);
+
+create table category(
+id int primary key not null,
+name varchar (120) not null,
+description varchar (120) not null
+);
+
+CREATE TABLE product (
+    id INT PRIMARY KEY NOT NULL,
+    name VARCHAR(120) NOT NULL,
+    price FLOAT NOT NULL,
+    description VARCHAR(120) NOT NULL,
+    id_category INT NOT NULL,
+    id_supplier INT NOT NULL,
+    FOREIGN KEY (id_category) REFERENCES category(id),
+    FOREIGN KEY (id_supplier) REFERENCES supplier(id)
+);
